@@ -1,31 +1,24 @@
-Docker Wrapper for React App
+Weather API 
 ============================
+A basic Express,Mongo,Nginx application returning the temperature for given cities
 
-This repo containers the docker files for the [frontend react app](https://bitbucket.org/realtycore/react_app/src/master/).
+
+Pre-requisite
+-----
+1) You need to have docker installed on your machine `https://hub.docker.com/editions/community/docker-ce-desktop-mac`
 
 Setup
 -----
 
-1. Clone this repo: `git clone git@bitbucket.org:realtycore/frontend-docker.git`
-2. Clone react_app repo into "app" subfolder: `cd frontend-docker && git clone git@bitbucket.org:realtycore/react_app.git app`
-3. Copy ".env.example" file to ".env" and edit as neccessary: `cp .env.example .env`
-4. Build: `docker-compose build`
+1. Clone this repo: `git clone https://github.com/aconital/node-mongo-nginx-weatherapi.git`
+2. Go to the project folder `cd node-mongo-nginx-weatherapi`
+3. Build: `docker-compose build`
+4. Run: `docker-compose up -d`
+x. In order to kill the containers after you are done: `docker-compose down`
 
 Usage
 -----
 
-#### Run containers in daemon mode
+#### GET /cities/:cities
 
-    docker-compose up -d
-
-#### View status of running containers
-
-    docker-compose ps
-
-#### View log feed of running containers
-
-    docker-compose logs -f
-
-#### Stop running containers
-
-    docker-compose down
+    Example: http://localhost:9000/cities/toronto|chicago
