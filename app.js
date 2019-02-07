@@ -47,6 +47,7 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Initialze the routes
 app.use('/', indexRouter);
 
 

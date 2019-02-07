@@ -3,7 +3,7 @@ const config = require('../config/keys')
 const axios = require('axios')
 
 /*
-* Returns temperature for a list of cities separated by |
+* Returns a list of temperatures for given cities separated by |
 * @param cities[] 
 */
 exports.fetchTemperatures =  async (req, res, next) => {
@@ -37,7 +37,6 @@ async function fetchCityTemp(city)
                 const resp = await axios.get(endpoint)
                 const temperature = resp.data.main.temp
                 
-          
                 const result = await CityTemperature.findOneAndUpdate(
                     {cityName}, 
                     {cityName, temperature},
