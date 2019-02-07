@@ -1,6 +1,7 @@
 Weather API 
 ============================
 A basic Express,Mongo,Nginx application returning the temperature for given cities.
+
 The code to handle the logic is in `controllers/CityTemperature.js`
 
 
