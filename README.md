@@ -14,7 +14,7 @@ Setup
 2. Go to the project folder `cd node-mongo-nginx-weatherapi`
 3. Build: `docker-compose build`
 4. Run: `docker-compose up -d`
-x. In order to kill the containers after you are done: `docker-compose down`
+5. In order to kill the containers after you are done: `docker-compose down`
 
 Usage
 -----
